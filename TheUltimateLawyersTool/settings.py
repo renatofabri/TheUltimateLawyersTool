@@ -8,6 +8,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
+# The base name for all pages will be:
+PAGE_TITLE = 'The Ultimate Lawyers Tool [%s]'
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -29,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -77,19 +80,23 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
 STATIC_URL = '/static/'
 
-# Project path
+STATIC_ROOT = 'staticfiles'
 
+# Project path
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 # Media path
-
-MEDIA_ROOT = PROJECT_PATH + '/media/'
+MEDIA_ROOT = BASE_DIR + '/media/'
 
 # Templates path
-
 TEMPLATE_DIRS = (
-    PROJECT_PATH + '/GUI/templates/',
+    BASE_DIR + '/template/base/',
+    BASE_DIR + '/template/custom/',
+)
+
+# Static files
+STATICFILES_DIRS = (
+    BASE_DIR + STATIC_URL,
 )

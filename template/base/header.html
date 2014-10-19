@@ -3,7 +3,8 @@
 <header>
 	<title>{{ title }}</title>
 	<!-- Following CSS and JS imports are general imports required in all pages -->
-
+	{% load staticfiles %}
+	<script src='{% static "js/jquery-1.11.1.min.js" %}' type='text/javascript'></script>
 	{% block header %}
 	{% endblock header %}
 </header>
