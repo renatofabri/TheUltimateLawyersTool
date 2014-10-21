@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<header>
-	<title>{{ title }}</title>
-	<!-- Following CSS and JS imports are general imports required in all pages -->
-	{% load staticfiles %}
-	<script src='{% static "js/jquery-1.11.1.min.js" %}' type='text/javascript'></script>
-	<script src='{% static "js/semantic.min.js" %}' type='text/javascript'></script>
-	{% block header %}
-	{% endblock header %}
-	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700'>
-	<link rel='stylesheet' type='text/css' href='{% static "css/reset.min.css" %}'>
-	<link rel='stylesheet' type='text/css' href='{% static "css/semantic.min.css" %}'>
-	<link rel='stylesheet' type='text/css' href='{% static "css/customized.css" %}'>
-</header>
-<body>
-	<div id="menu" class="header ui fixed transparent inverted main menu">
-		<div class="container">
-			<div class="title item">
-				The Ultimate Lawyers Tool
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ title }}</title>
+		<!-- Following CSS and JS imports are general imports required in all pages -->
+		{% load staticfiles %}
+		<script src='{% static "js/jquery-1.11.1.min.js" %}' type='text/javascript'></script>
+		<script src='{% static "js/semantic.min.js" %}' type='text/javascript'></script>
+		{% block header %}
+		{% endblock header %}
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700'>
+		<link rel='stylesheet' type='text/css' href='{% static "css/reset.min.css" %}'>
+		<link rel='stylesheet' type='text/css' href='{% static "css/semantic.min.css" %}'>
+		<link rel='stylesheet' type='text/css' href='{% static "css/customized.css" %}'>
+	</head>
+	<body>
+		<div id="menu" class="header ui fixed transparent inverted main menu">
+			<div class="container">
+				<div class="title item">
+					The Ultimate Lawyers Tool
+				</div>
 			</div>
 		</div>
-	</div>
