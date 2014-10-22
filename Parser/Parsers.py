@@ -17,9 +17,9 @@ class ParserTjSp:
     def parse_processo_by_numero(self, num_processo):
 
         loginClient = LoginClient()
-        requester = loginClient.LoginTjSp(user='', pwd='')
+        requester = loginClient.LoginTjSp(user='33812315882', pwd='pedro12k14')
 
-        attrs = { 'num_unificado': num_processo, 'num_ano_unificado': num_processo }
+        attrs = { 'num_unificado': num_processo, 'num_ano_unificado': '' }
         page = requester.get(TJSP_GET_PROCESSO_BY_NUMERO %  attrs, verify=False)
 
         pageSoup = BeautifulSoup(page.text)
