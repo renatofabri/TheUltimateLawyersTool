@@ -2,7 +2,8 @@ __author__ = 'Fn'
 
 import requests
 from bs4 import BeautifulSoup
-from Common.LoginUrls import *
+from Common.LoginUrls import TJSP_TOKEN_URL, TJSP_LOGIN_URL
+
 
 class LoginClient:
 
